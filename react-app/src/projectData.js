@@ -37,7 +37,7 @@ const projectData = [
 
     {
         id: 3,
-        img: process.env.PUBLIC_URL + "/dark-PDF.png",
+        img: process.env.PUBLIC_URL + "/Dark-PDF.png",
         pLink: "https://microsoftedge.microsoft.com/addons/detail/dark-pdf-reader/eidomanckadoipfopeplokahddljcnak",
         h2: "Dark PDF Reader Extension",
         p: "Simple yet powerful – Dark PDF Reader is an essential Edge extension for anyone who prefers reading PDFs in dark mode. Whether you’re working late at night or just want to reduce eye strain, this extension offers a seamless and customizable dark mode experience for all your PDF documents. ",
