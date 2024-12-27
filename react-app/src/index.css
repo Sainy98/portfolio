@@ -940,7 +940,7 @@ ul.skills li.more input:checked+label:hover {
 
 .certificate_div>img {
   width: 280px;
-  /* height: 330px; */
+
   height: inherit;
   border-radius: inherit;
 }
@@ -955,7 +955,7 @@ ul.skills li.more input:checked+label:hover {
 }
 
 .project {
-  padding: 20px 20px 100px 20px;
+  padding: 20px 20px 130px 20px;
   display: flex;
   font-size: 34px;
   margin: 60px auto;
@@ -964,26 +964,36 @@ ul.skills li.more input:checked+label:hover {
 
 .project button {
   position: relative;
-  padding: 17px 23px;
-  background-color: #010152;
-  border-radius: 11px;
-  right: -3em;
-  bottom: -5px;
+  padding: 17px 30px;
+  background: linear-gradient(145deg, #010152, #050590); /* Light-to-dark gradient */
+  border-radius: 12px;
   font-size: 28px;
   border: none;
-  box-shadow: 0px 0px 3px 0px #00c6ff;
-  /* visibility: hidden; */
+  color: white;
+  cursor: pointer;
+  box-shadow: 
+      4px 4px 8px rgba(0, 0, 0, 0.3), /* Dark shadow for depth */
+      -4px -4px 8px rgba(255, 255, 255, 0.2); /* Highlight shadow */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin: 10px 60px;
 }
 
-.project button a {
-  text-decoration: none;
-
-}
-
+/* Add a hover effect to simulate button press */
 .project button:hover {
-  box-shadow: 0px 0px 5px 0px #00c6ff;
-  background-color: #16ff0085;
+  transform: translateY(-2px); /* Slight upward movement */
+  box-shadow: 
+      6px 6px 12px rgba(0, 0, 0, 0.4), 
+      -6px -6px 12px rgba(255, 255, 255, 0.3);
 }
+
+/* Active state (clicked effect) */
+.project button:active {
+  transform: translateY(2px); /* Slight downward movement */
+  box-shadow: 
+      2px 2px 4px rgba(0, 0, 0, 0.4), 
+      -2px -2px 4px rgba(255, 255, 255, 0.2);
+}
+
 
 
 .project_img {
@@ -1031,18 +1041,21 @@ ul.skills li.more input:checked+label:hover {
 }
 
 .codingLanguage {
-  /* margin-left: 32px; */
   display: flex;
   justify-content: center;
+  gap: 10px;
 }
 
-.codingLanguage image {
-  height: inherit;
+
+
+.codingLanguage img {
+  width: 78px;
+  height: 80px;
+  gap: 10px;
 }
 
-.codingLanguage svg {
-  height: 100px;
-  width: 100px;
+.codingLanguage>img:hover{
+          transform: scale(1.1);
 }
 
 .project p {
@@ -1077,18 +1090,43 @@ ul.skills li.more input:checked+label:hover {
   width: 80px;
 }
 
+.showMoreDiv{
+  margin-top: 20px;
+}
+
 .showMoreBtn {
   cursor: pointer;
   display: block;
   margin: auto;
   background: #010152;
   padding: 15px;
-  font-size: 30px;
+  font-size: 1.5rem;
   border: 2px solid;
   border-radius: 8px;
   color: #16ff00;
   animation: pulse 1s infinite;
+  animation: shake 1s infinite;
 
+}
+
+@keyframes shake {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+   
+    transform: translateY(-5px);
+    
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  75% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 
@@ -1150,6 +1188,7 @@ ul.skills li.more input:checked+label:hover {
 
   border-radius: 10px;
 
+
 }
 
 .HobbyDiv>img {
@@ -1167,7 +1206,13 @@ ul.skills li.more input:checked+label:hover {
   font-size: 30px;
   visibility: hidden;
 }
-
+.LoadingMsg{
+  display: block;
+  margin: auto;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: 38px;
+}
 
 .HobbyDiv:hover {
   h3 {
@@ -1223,7 +1268,7 @@ ul.skills li.more input:checked+label:hover {
   margin: 0px auto;
   display: block;
   font-size: 35px;
-  padding: 20px;
+  padding: 28px;
 
 
   background-color: rgba(1, 1, 82, 0.69);
@@ -1404,8 +1449,8 @@ ul.skills li.more input:checked+label:hover {
   }
 
   .certificate_div>img {
-    width: 233px;
-    height: 215px;
+    width: inherit;
+    height: inherit;
     display: block;
     margin: 0 auto;
   }
@@ -1428,6 +1473,7 @@ ul.skills li.more input:checked+label:hover {
     flex-wrap: wrap;
     font-size: large;
     margin-bottom: -2em;
+    padding-bottom: 50px;
   }
 
   .showMoreBtn {
@@ -1444,7 +1490,7 @@ ul.skills li.more input:checked+label:hover {
     font-size: 23px;
     /* visibility: hidden; */
     position: static;
-    padding: 9px 9px;
+    padding: 12px 20px;
     background-color: rgba(1, 1, 82, 0.69);
     border-radius: 11px;
     right: -3em;
@@ -1485,9 +1531,10 @@ ul.skills li.more input:checked+label:hover {
 
   }
 
-  .codingLanguage svg {
+  .codingLanguage img {
     width: 50px;
     height: 50px;
+    
 
   }
 
@@ -1538,6 +1585,7 @@ ul.skills li.more input:checked+label:hover {
     width: 100%;
     display: block;
     margin: auto;
+    box-shadow: none;
 
   }
 
@@ -1549,7 +1597,9 @@ ul.skills li.more input:checked+label:hover {
   }
 
   .hobbyBox img {
+    
     width: inherit;
+    height: 300px;
   }
 
   .Contact {
@@ -1598,6 +1648,7 @@ ul.skills li.more input:checked+label:hover {
     display: block;
     font-size: 1.2em;
     text-indent: 0;
+    padding: 18px;
   }
 
   .ContactForm>.subBtn {
